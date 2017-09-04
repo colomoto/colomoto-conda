@@ -1,6 +1,7 @@
 
 # Install the colomoto API
-python setup.py install
+mkdir $PREFIX/site-packages
+cp -r colomoto $PREFIX/site-packages
 
 # TODO: add some example scripts and notebooks directly here?
 

@@ -5,18 +5,15 @@ package:
 source:
   url: http://ginsim.org/sites/default/files/ginsim-dev/GINsim-2.9.6-SNAPSHOT-jar-with-dependencies.jar
 
+build:
+  noarch: generic
+
 requirements:
-  build:
-    - python >=3.6
-    - setuptools
   run:
-    - python >=3.6
     - openjdk
     - clingo
     - nusmv
-    - py4j
 
 about:
   home:  http://ginsim.org/
-
 

@@ -5,12 +5,16 @@ package:
 source:
   git_url: https://github.com/colomoto/colomoto-api.git
 
+build:
+  noarch: python
 
 requirements:
   run:
+    - python
     - ginsim
     - maboss
     - notebook
+    - py4j
 
 about:
   home:  http://colomoto.org/
