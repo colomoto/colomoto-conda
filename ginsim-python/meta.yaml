@@ -1,0 +1,20 @@
+package:
+  name: ginsim-python
+  version: "0.2"
+
+source:
+  git_url: https://github.com/GINsim/GINsim-python.git
+
+build:
+  noarch: python
+
+requirements:
+  run:
+    - python
+    - ginsim
+    - colomoto_jupyter
+
+about:
+  home:  http://ginsim.org/
+
+
