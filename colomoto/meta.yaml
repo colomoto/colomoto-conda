@@ -1,20 +1,15 @@
 package:
   name: colomoto
-  version: "0.1"
-
-source:
-  git_url: https://github.com/colomoto/colomoto-api.git
-
-build:
-  noarch: python
+  version: "0.2"
 
 requirements:
   run:
     - python
-    - ginsim
-    - maboss
     - notebook
     - py4j
+    - ginsim
+    - maboss
+    - pypint
 
 about:
   home:  http://colomoto.org/
