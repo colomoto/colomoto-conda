@@ -12,6 +12,7 @@ requirements:
   run:
     - python
     - ginsim
+    - py4j
     - colomoto_jupyter
 
 about:

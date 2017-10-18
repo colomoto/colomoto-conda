@@ -6,8 +6,7 @@ requirements:
   run:
     - python
     - notebook
-    - py4j
-    - ginsim
+    - ginsim-python
     - maboss
     - pypint
 
