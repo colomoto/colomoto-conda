@@ -10,6 +10,9 @@ requirements:
     - maboss
     - pypint
 
+build:
+  noarch: generic
+
 about:
   home:  http://colomoto.org/
 

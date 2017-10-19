@@ -1,13 +1,12 @@
 package:
   name: colomoto_jupyter
-  version: "0.3.3"
+  version: "0.3.4"
 
 source:
-  fn: colomoto_jupyter-0.3.3.tar.gz
-  url: https://pypi.python.org/packages/87/45/e3a1538baa6f1feb94ae28ef439ac299b8fe0428071f4de7e5d92eb019d3/colomoto_jupyter-0.3.3.tar.gz
-  md5: 41f50b79eff68c40a2bb1feb1f724424
+  git_url: https://github.com/colomoto/colomoto-jupyter.git
 
-# build:
+build:
+  noarch: python
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
   # number: 1

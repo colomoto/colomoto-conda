@@ -1,6 +1,6 @@
 #!/bin/bash
 
 #$PYTHON setup.py install 
-mkdir -p "${SP_DIR}"
-cp -r pypint "${SP_DIR}"
+mkdir -p "${PREFIX}/site-packages"
+cp -r pypint "${PREFIX}/site-packages"
 

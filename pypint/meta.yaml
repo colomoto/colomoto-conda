@@ -8,7 +8,8 @@ source:
   md5: 27b377057e57cca4a391b1dd34d4980b
 
 build:
-  # noarch: python
+  noarch: python
+  number: 1
   # preserve_egg_dir: True
   entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
@@ -18,11 +19,8 @@ build:
     #
     # Would create an entry point called pypint that calls pypint.main()
 
-    - pint-import=pypint.console:import_model
+          #    - pint-import=pypint.console:import_model
 
-  # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
-  # number: 1
 
 requirements:
   build:
