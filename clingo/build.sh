@@ -13,5 +13,6 @@ cp -p clasp clingo gringo lpconvert reify "$PREFIX/bin"
 cp -p lib*.so* "$PREFIX/lib"
 
 # add the python module
-cp -a python "$PREFIX/lib/python3.6"
+test -d "$PREFIX/lib/python3.6/" || mkdir -p "$PREFIX/lib/python3.6/"
+cp -a python/* "$PREFIX/lib/python3.6/"
 
