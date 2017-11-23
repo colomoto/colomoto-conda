@@ -7,9 +7,9 @@ Install conda packages
 ======================
 
 
-See https://conda.io/miniconda.html to doanload and install conda.
+See https://conda.io/miniconda.html to download and install conda.
 
-Inside your conda environment, use "conda install -c colomoto colomoto" to install all tools and the Jupyter notebook.
+Inside your conda environment, use "conda install -c bioconda -c colomoto colomoto" to install all tools and the Jupyter notebook.
 
 
 Build conda packages
