@@ -7,6 +7,9 @@ source:
   url: https://pypi.python.org/packages/c5/af/b7f8f6e1884463244006fedd98460df6d05043c6daeb7d91a4ffdd7d0582/colomoto_jupyter-0.3.4.tar.gz
   md5: 2aea6b639943e1e782a313ed5b54cf01
 
+channels:
+  - bioconda # for pygraphviz
+
 build:
   noarch: python
   # If this is a new build for the same version, increment the build

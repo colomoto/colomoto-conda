@@ -1,9 +1,13 @@
+{% set version = "2.6.0" %}
+
 package:
   name: nusmv
-  version: "2.6.0"
+  version: {{ version }}
 
 source:
-  url: http://nusmv.fbk.eu/distrib/NuSMV-2.6.0-linux64.tar.gz
+  url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-linux64.tar.gz     # [linux64]
+  url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-macosx64.tar.gz    # [osx]
+  url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-win64.tar.gz       # [win64]
 
 about:
   home: http://nusmv.fbk.eu

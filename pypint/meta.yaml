@@ -19,7 +19,7 @@ build:
     #
     # Would create an entry point called pypint that calls pypint.main()
 
-    - pint-import=pypint.console:import_model
+#    - pint-import=pypint.console:import_model
 
 
 requirements:
