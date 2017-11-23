@@ -1,0 +1,41 @@
+package:
+  name: pydot
+  version: "1.2.3"
+
+source:
+  fn: pydot-1.2.3.tar.gz
+  url: https://pypi.python.org/packages/ae/e6/2c0b7c142c18fb89b294734d45d4264a71269686090af69404df211754c3/pydot-1.2.3.tar.gz
+  md5: 5b50fd8cf022811d8718562ebc8aefb2
+
+# build:
+  # noarch: python
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - pydot = pydot:main
+    #
+    # Would create an entry point called pydot that calls pydot.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pyparsing >=2.1.4
+
+  run:
+    - python
+    - pyparsing >=2.1.4
+
+about:
+  home: https://github.com/erocarrera/pydot
+  license: MIT License
+  summary: "Python interface to Graphviz's Dot"
+  license_family: MIT
+
