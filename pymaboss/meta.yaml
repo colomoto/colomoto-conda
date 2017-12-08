@@ -1,0 +1,20 @@
+package:
+  name: pymaboss
+  version: "0.3"
+
+source:
+  git_url: https://github.com/thenlevy/pyMaBoSS.git
+
+build:
+  noarch: python
+  number: 1
+
+requirements:
+  run:
+    - python
+    - maboss
+    - colomoto_jupyter
+
+about:
+  home:  https://github.com/thenlevy/pyMaBoSS
+
