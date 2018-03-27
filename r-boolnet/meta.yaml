@@ -14,6 +14,9 @@ source:
   sha256: 4a35d1bb0db125337d0372098fd2e9072b9c8c4055bce6bc96615cc70d51c4e8
 
 
+channels:
+  - r
+
 build:
   # If this is a new build for the same version, increment the build number.
   number: 1
