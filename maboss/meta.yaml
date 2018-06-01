@@ -5,6 +5,9 @@ package:
 source:
   url: https://maboss.curie.fr/pub/MaBoSS-env-2.0.tgz
 
+build:
+  number: 2
+
 requirements:
   build:
     - flex
