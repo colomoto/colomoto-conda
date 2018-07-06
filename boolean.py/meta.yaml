@@ -1,0 +1,28 @@
+{% set name = "boolean.py" %}
+{% set version = "3.5+git" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  url: https://github.com/bastikr/boolean.py/archive/74796a47b2ac885d62fc4eea0dc38cba4d98807b.zip
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+about:
+  home: https://github.com/bastikr/boolean.py
+  summary: 'Define boolean algebras, create and parse boolean expressions and create custom boolean DSL.'
+  license: revised BSD
+
