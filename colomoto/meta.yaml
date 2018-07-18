@@ -1,6 +1,6 @@
 package:
   name: colomoto
-  version: "0.2.8"
+  version: "0.2.9"
 
 channels:
   - potassco
@@ -19,7 +19,7 @@ requirements:
     - ginsim-python 0.3.0
     - pypint   1.4.1
     - colomoto_jupyter 0.4.6
-    - pymaboss 0.6
+    - pymaboss 0.6.2
 
 build:
   noarch: generic
