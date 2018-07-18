@@ -1,0 +1,9 @@
+package:
+  name: boolsim
+  version: "1.2"
+
+source:
+  url: https://www.vital-it.ch/api/download.php?software=boolSim&file=boolSim-1.2.0-Linux-libc2.12.tar.gz
+
+about:
+  home:  https://www.vital-it.ch/research/software/boolSim
