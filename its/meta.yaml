@@ -1,10 +1,13 @@
 package:
   name: its
-  version: "rolling"
+  version: 20180905
 
 
 source:
-  url: http://teamcity-systeme.lip6.fr/guestAuth/repository/download/bt54/.lastSuccessful/ITS_linux_64.tar.gz
+    - url: https://lip6.github.io/libITS/its-reach # [linux]
+    - url: https://lip6.github.io/ITS-CTL/its-ctl  # [linux]
+    - url: https://github.com/lip6/libITS/raw/osx/its-reach # [osx]
+    - url: https://github.com/lip6/ITS-CTL/raw/osx/its-ctl  # [osx]
 
 
 about:
