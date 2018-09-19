@@ -25,7 +25,7 @@ source:
 
 requirements:
   build:
-    - python
+    - python {{ python }}
     - setuptools
     - pyparsing >=2.1.4
 
