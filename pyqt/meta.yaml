@@ -1,0 +1,6 @@
+package:
+    name: pyqt
+    version: 5.9.9999
+build:
+    number: 0
+    noarch: generic
