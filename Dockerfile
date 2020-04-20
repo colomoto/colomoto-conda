@@ -2,6 +2,7 @@ FROM continuumio/miniconda3
 MAINTAINER CoLoMoTo Group <contact@colomoto.org>
 
 RUN conda install -y anaconda-client conda-build && conda clean -y --all
+RUN conda config --set anaconda_upload yes
 
 ENTRYPOINT ["/entrypoint.sh"]
 COPY entrypoint.sh /entrypoint.sh
