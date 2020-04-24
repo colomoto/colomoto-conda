@@ -21,7 +21,4 @@ then run "conda-build <package>" for each tool.
 The conda package will be placed in "$CONDAROOT/conda-bld/linux64", it can be installed manually or uploaded on anaconda.
 To upload, first install anaconda (conda install anaconda), then run "anaconda upload <package file>".
 
-Note: clingo is built from source and requires a newer gcc than the one in the main conda repostories. It can be built with
-gcc-7, available for example on the creditx channel: "conda-build -c creditx clingo".
-
 
