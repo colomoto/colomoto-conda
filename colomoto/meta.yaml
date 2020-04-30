@@ -1,6 +1,6 @@
 package:
   name: colomoto
-  version: "0.2.15"
+  version: "0.2.17"
 
 channels:
   - bioconda
@@ -20,6 +20,15 @@ requirements:
     - colomoto_jupyter
     - pymaboss
     - mpbn
+    - casq
+    - rpy2
+    - r-boolnet
+    - bioconductor-cellnoptr
+    - bioconductor-cnorode
+    - bioconductor-cnorfeeder
+    - bioconductor-cnordt
+    - bioconductor-cnorfuzzy
+    - bioconductor-omnipathr
 
 build:
   noarch: generic
