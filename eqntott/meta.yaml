@@ -1,0 +1,12 @@
+package:
+  name: eqntott
+  version: "1.0"
+
+
+source:
+  git_url: https://github.com/TheProjecter/eqntott.git
+  git_rev: 392759e6493a46f1d1ed7d9fb1c7c31197b0f6a8
+
+requirements:
+  build:
+    - {{ compiler('c') }}

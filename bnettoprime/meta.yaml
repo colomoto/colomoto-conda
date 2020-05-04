@@ -1,0 +1,11 @@
+package:
+  name: bnettoprime
+  version: "1.0"
+
+
+source:
+  url: https://github.com/xstreck1/BNetToPrime/archive/v1.0.0.tar.gz
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
