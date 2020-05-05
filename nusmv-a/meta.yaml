@@ -1,0 +1,25 @@
+{% set version = "1.2" %}
+
+package:
+  name: nusmv-a
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/aurelien-naldi/NuSMV-a.git
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - python=2.7
+    - cmake
+    - flex
+    - bison
+    - ncurses
+  host:
+    - ncurses
+    - readline
+
+about:
+  home: https://github.com/hklarner/NuSMV-a
+
+
