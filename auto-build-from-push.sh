@@ -13,14 +13,15 @@ echo "OSTYPE: $OSTYPE"
 case "$OSTYPE" in
   darwin*) arch=macos;;
   linux*)  arch=linux;;
+  msys*)   arch=win64;;
   *)        echo "unknown: $OSTYPE"; exit 1;;
 esac
 
 to_build() {
-    if [[ "${arch}" == "macos" ]]; then
-        [ -f $1/build-macos ]
-    else
+    if [[ "${arch}" == "linux" ]]; then
         true
+    else
+        [ -f "$1/build-${arch}" ]
     fi
 }
 
