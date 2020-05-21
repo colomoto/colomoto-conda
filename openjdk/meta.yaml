@@ -1,0 +1,6 @@
+package:
+    name: openjdk
+    version: 9999
+build:
+    number: 0
+    noarch: generic
