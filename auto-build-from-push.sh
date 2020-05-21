@@ -27,7 +27,7 @@ to_build() {
 
 set -ex
 mod=$(git diff $OLD_REF..$GITHUB_REF --name-only| cut -d/ -f1|uniq)
-mod=$(for e in $mod; do if [ -d $e ] && to_build $e; then echo $e; fi; done)
+mod=$(for e in $mod; do if [ -f $e/meta.yaml ] && to_build $e; then echo $e; fi; done)
 echo $mod
 if [ -z "${mod}" ]; then
     exit 0
