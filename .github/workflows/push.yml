@@ -1,0 +1,21 @@
+name: autobuild
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                os: [ubuntu-latest, macOS-latest]
+        env:
+            OLD_REF: ${{ github.event.before }}
+            ANACONDA_TOKEN: ${{ secrets.ANACONDA_TOKEN }}
+        steps:
+            - uses: s-weigand/setup-conda@v1
+            - uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+            - run: bash auto-build-from-push.sh
