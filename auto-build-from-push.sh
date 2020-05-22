@@ -35,6 +35,6 @@ fi
 conda install -y anaconda-client conda-build
 conda config --set anaconda_upload yes
 for e in $mod; do
-    conda build --user __token__ --token $ANACONDA_TOKEN \
+    conda build --user __token__ --token $ANACONDA_TOKEN --no-force-upload\
         -c defaults -c potassco -c conda-forge -c colomoto $e
 done
