@@ -26,7 +26,7 @@ to_build() {
 }
 
 set -ex
-mod=$(git diff $OLD_REF..$GITHUB_REF --name-only| cut -d/ -f1|uniq)
+mod=$(git diff $OLD_REF..$GITHUB_REF --name-only|cut -d/ -f1|uniq)
 mod=$(for e in $mod; do if [ -f $e/meta.yaml ] && to_build $e; then echo $e; fi; done)
 echo $mod
 if [ -z "${mod}" ]; then
@@ -34,7 +34,9 @@ if [ -z "${mod}" ]; then
 fi
 conda install -y anaconda-client conda-build
 conda config --set anaconda_upload yes
-for e in $mod; do
+for e in ${mod}; do
+    cd ${e}
     conda build --user __token__ --token $ANACONDA_TOKEN --no-force-upload\
-        -c defaults -c potassco -c conda-forge -c colomoto $e
+        -c defaults -c potassco -c conda-forge -c colomoto .
+    cd ..
 done
