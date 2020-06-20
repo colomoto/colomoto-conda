@@ -6,6 +6,7 @@ package:
 
 source:
   url: https://satoss.uni.lu/software/CABEAN/cabean-{{ version }}.zip
+  sha256: 1714506126badbb46877e09a72e4731e397927ef2f25dca81f353f6e56cf3751
 
 about:
   home:  https://satoss.uni.lu/software/CABEAN/
