@@ -1,0 +1,13 @@
+{% set name = "cabean" %}
+{% set version = "1.0.0" %}
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  url: https://satoss.uni.lu/software/CABEAN/cabean-{{ version }}.zip
+
+about:
+  home:  https://satoss.uni.lu/software/CABEAN/
+  summary: A Software Tool for the Control of Asynchronous Boolean Networks
+
