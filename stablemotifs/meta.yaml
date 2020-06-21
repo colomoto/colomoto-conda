@@ -1,0 +1,17 @@
+package:
+  name: stablemotifs
+  version: "1"
+
+source:
+    url: https://github.com/jgtz/StableMotifs/archive/3f900228cb2192747346355be044e8f86c311cbd.zip
+
+build:
+    noarch: generic
+
+requirements:
+  run:
+    - openjdk
+
+about:
+  home:  https://github.com/jgtz/StableMotifs
+
