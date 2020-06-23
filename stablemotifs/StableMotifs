@@ -1,4 +1,5 @@
 #!/bin/bash
 D=`dirname "$0"`
 D=`dirname "$D"`
-java -jar $D/opt/StableMotifs/StableMotifs.jar "${@}"
+export JVM_ARGS="-Dnashorn.args=--no-deprecation-warning"
+java "${JVM_ARGS}" -jar $D/opt/StableMotifs/StableMotifs.jar "${@}"
