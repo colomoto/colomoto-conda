@@ -4,9 +4,5 @@ package:
 
 
 source:
-  git_url: https://github.com/TheProjecter/eqntott.git
-  git_rev: 392759e6493a46f1d1ed7d9fb1c7c31197b0f6a8
+  url: https://github.com/hklarner/PyBoolNet/raw/master/Dependencies/linux64/eqntott/eqntott_linux64
 
-requirements:
-  build:
-    - {{ compiler('c') }}
