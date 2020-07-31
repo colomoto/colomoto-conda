@@ -6,7 +6,7 @@ package:
   version: '{{ version }}'
 
 source:
-  url: https://github.com/pauleve/pint/archive/{{ name }}-v{{ version }}.tar.gz
+  url: https://github.com/pauleve/pint/archive/{{ name }}-v{{ version }}.zip
 
 build:
   number: 0
