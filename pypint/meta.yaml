@@ -1,0 +1,42 @@
+{% set name = "pypint" %}
+{% set version = "1.6.1" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  url: https://github.com/pauleve/pint/archive/{{ name }}-v{{ version }}.tar.gz
+
+build:
+  number: 0
+  entry_points:
+    - pint-import=pypint.console:import_model
+  script: cd interfaces/ipython && python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - colomoto_jupyter >=0.5.0
+    - boolean.py
+    - ginsim-python
+    - networkx >=2.0
+    - pint >=2018.07.10
+
+test:
+  imports:
+    - pypint
+    - pypint.converters
+  commands:
+    - pint-import --help
+
+about:
+  home: http://loicpauleve.name/pint
+  license: CeCILL
+  summary: Python interface to Pint
+  description: Python interface to Pint
+
