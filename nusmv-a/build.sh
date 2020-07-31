@@ -5,7 +5,7 @@ cd build
 
 cmake -DBUILD_TESTS=OFF .. -Wno-dev
 make
-cp -a bin "$PREFIX"
+mkdir -p "$PREFIX/bin"
 
 # Rename the binary for use side-by-side with the regular NuSMV
 # ltl2smv is part of the regular NuSMV package
