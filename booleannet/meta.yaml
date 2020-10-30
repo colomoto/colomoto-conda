@@ -1,0 +1,30 @@
+{% set name = "booleannet" %}
+{% set version = "1.2.8" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  git_url: https://github.com/ialbert/booleannet.git
+  git_rev: 7ed6a6c34c3b896274b3fca3e9f0fcd7b9aa5a37
+
+build:
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - networkx >=2.0
+    - numpy
+
+about:
+  home: https://github.com/ialbert/booleannet
+  summary: Boolean Network Modeling
+  description: Boolean Network Modeling
+
