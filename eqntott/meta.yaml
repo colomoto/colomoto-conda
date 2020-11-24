@@ -2,7 +2,9 @@ package:
   name: eqntott
   version: "1.0"
 
+build:
+  number: 1
 
 source:
-  url: https://github.com/hklarner/PyBoolNet/raw/master/Dependencies/linux64/eqntott/eqntott_linux64
+  url: https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/eqntott/eqntott-9.0.tar.gz
 
