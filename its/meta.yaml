@@ -5,10 +5,9 @@ package:
 
 source:
     - url: https://lip6.github.io/libITS/its-reach # [linux]
-    - url: https://lip6.github.io/ITS-CTL/its-ctl  # [linux]
     - url: https://github.com/lip6/libITS/raw/osx/its-reach # [osx]
+    - url: https://lip6.github.io/ITS-CTL/its-ctl  # [linux]
     - url: https://github.com/lip6/ITS-CTL/raw/osx/its-ctl  # [osx]
-
 
 about:
   home:  https://github.com/lip6/ITSTools
