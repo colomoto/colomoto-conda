@@ -1,0 +1,40 @@
+{% set name = "PyBoolNet" %}
+{% set version = "3.0.9" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/hklarner/pyboolnet/archive/refs/tags/{{ version }}.zip
+
+channels:
+  - colomoto
+  - potassco
+  - conda-forge
+
+build:
+  number: 0
+  noarch: python
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - bnettoprime
+    - click
+    - clingo
+    - eqntott
+    - espresso-logic-minimizer
+    - graphviz
+    - networkx
+    - nusmv-a
+    - pyeda
+
+about:
+  home: https://github.com/hklarner/PyBoolNet
+  summary: 'Generation, modification and analysis of Boolean networks'
+
