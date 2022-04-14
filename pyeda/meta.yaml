@@ -1,0 +1,29 @@
+{% set name = "pyeda" %}
+{% set version = "0.28.0" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: 07185f458d5d0b2ba5058da8b95dad6ab7684ceaf41237a25bcd3f005490f59d
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+  build:
+    - {{ compiler('c') }}
+
+about:
+  home: https://github.com/cjdrake/pyeda
+  license: BSD
+  license_family: BSD
+  summary: "Python Electronic Design Automation"
