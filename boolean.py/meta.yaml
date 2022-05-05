@@ -1,12 +1,12 @@
 {% set name = "boolean.py" %}
-{% set version = "3.9+git_1" %}
+{% set version = "4.0" %}
 
 package:
   name: '{{ name|lower }}'
   version: '{{ version }}'
 
 source:
-  url: https://github.com/bastikr/boolean.py/archive/e0426c197bf305ec9e8ddee9b83276c7918cb303.zip
+  url: https://github.com/bastikr/boolean.py/archive/refs/tags/v{{ version }}.zip
 
 build:
   number: 0
@@ -25,4 +25,3 @@ about:
   home: https://github.com/bastikr/boolean.py
   summary: 'Define boolean algebras, create and parse boolean expressions and create custom boolean DSL.'
   license: revised BSD
-
