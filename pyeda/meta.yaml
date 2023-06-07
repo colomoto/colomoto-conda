@@ -16,9 +16,9 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python {{ python }}
   run:
-    - python
+    - python {{ python }}
   build:
     - {{ compiler('c') }}
 
