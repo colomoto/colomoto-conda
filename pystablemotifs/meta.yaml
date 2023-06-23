@@ -1,12 +1,12 @@
 {% set name = "pystablemotifs" %}
-{% set version = "3.0.3" %}
+{% set version = "3.0.4dev1" %}
 
 package:
   name: '{{ name|lower }}'
   version: '{{ version }}'
 
 source:
-  url: https://github.com/jcrozum/{{ name }}/archive/{{ version }}.zip
+  url: https://github.com/jcrozum/{{ name }}/archive/8d3863a808f9be302676868b9e22b2b5025df481.zip
 
 build:
   number: 0
