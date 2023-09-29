@@ -32,6 +32,8 @@ echo $mod
 if [ -z "${mod}" ]; then
     exit 0
 fi
+conda install -y conda-libmamba-solver
+conda config --set solver libmamba
 conda install -y anaconda-client conda-build conda-verify
 conda config --set anaconda_upload yes
 for e in ${mod}; do
