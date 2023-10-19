@@ -1,0 +1,31 @@
+{% set name = "diptest" %}
+{% set version = "0.5.2" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  url: "https://github.com/RUrlus/diptest/archive/refs/tags/v{{ version }}.zip"
+
+build:
+  script: "{{ PYTHON }} setup.py install"
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+  host:
+    - python {{ python }}
+    - numpy >=1.18
+    - pybind11
+    - scikit-build
+    - psutil
+  run:
+    - python {{ python }}
+    - numpy >=1.18
+    - psutil
+
+about:
+  home: https://github.com/RUrlus/diptest
+  summary: "A Python/C(++) implementation of Hartigan & Hartigan's dip test for unimodality."
+  license: GPL-3.0
