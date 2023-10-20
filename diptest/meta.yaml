@@ -6,20 +6,16 @@ package:
   version: '{{ version }}'
 
 source:
-  url: "https://github.com/RUrlus/diptest/archive/refs/tags/v{{ version }}.zip"
+  url: https://files.pythonhosted.org/packages/63/77/8aed702f2604487f2af217aa8ad8f4cd8a284a3469a28398f753681d8f84/diptest-0.5.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl [linux and py311]
+  url: https://files.pythonhosted.org/packages/78/35/e3523f38e13a20e274ec49fc9cc57eac7d9704a1716af2f194883249a983/diptest-0.5.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl [linux and py310]
 
 build:
-  script: "{{ PYTHON }} setup.py install"
+  number: 1
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
-  host:
-    - python {{ python }}
-    - numpy >=1.18
-    - pybind11
-    - scikit-build
-    - psutil
+    - python
+    - pip
   run:
     - python {{ python }}
     - numpy >=1.18
