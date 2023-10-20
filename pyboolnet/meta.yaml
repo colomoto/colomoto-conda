@@ -1,5 +1,5 @@
 {% set name = "PyBoolNet" %}
-{% set version = "3.0.10" %}
+{% set version = "3.0.10.post1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,6 +7,8 @@ package:
 
 source:
   url: https://github.com/hklarner/pyboolnet/archive/refs/tags/{{ version }}.zip
+  patches:
+    - py3compat.patch
 
 build:
   script: python -m pip install --no-deps --ignore-installed .

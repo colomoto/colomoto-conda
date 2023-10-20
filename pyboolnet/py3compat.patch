@@ -1,0 +1,13 @@
+diff --git a/pyboolnet/boolean_normal_forms.py b/pyboolnet/boolean_normal_forms.py
+index 770b76d..d4e14e6 100755
+--- a/pyboolnet/boolean_normal_forms.py
++++ b/pyboolnet/boolean_normal_forms.py
+@@ -113,7 +113,7 @@ def functions2mindnf(functions: Dict[str, callable]) -> Dict[str, str]:
+ 
+     expressions = {}
+     for name, func in functions.items():
+-        inputs = inspect.getargspec(func).args
++        inputs = inspect.getfullargspec(func).args
+ 
+         if not inputs:
+             const = func()
