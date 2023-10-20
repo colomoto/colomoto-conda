@@ -1,0 +1,47 @@
+{% set name = "quadprog" %}
+{% set version = "0.1.11" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/HKaras/quadprog/archive/690081f3285d4eb554394209473a274f230cd9ba.zip
+
+build:
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
+  host:
+    - cython
+    - pip
+    - python
+  run:
+    - cython
+    - python
+    - numpy
+
+test:
+  imports:
+    - quadprog
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://github.com/rmcgibbo/quadprog
+  license: GPL-2.0-or-later
+  license_family: GPL2
+  license_file: LICENSE
+  summary: Quadratic Programming Solver
+
+extra:
+  recipe-maintainers:
+    - nfahlgren
