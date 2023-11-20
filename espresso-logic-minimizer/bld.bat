@@ -1,1 +1,1 @@
-copy "Espresso.exe" "%LIBRARY_BIN%\software.exe"
+copy "Espresso.exe" "%LIBRARY_BIN%\espresso.exe"
