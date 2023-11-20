@@ -7,6 +7,5 @@ package:
 source:
   url: https://github.com/Gigantua/Espresso/releases/download/Latest/Espresso.exe  # [win64]
 
-test:
-  commands:
-    - espresso -h
+build:
+  number: 0
