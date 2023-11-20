@@ -10,8 +10,7 @@ source:
   sha256: 07185f458d5d0b2ba5058da8b95dad6ab7684ceaf41237a25bcd3f005490f59d
 
 build:
-  number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 1
 
 requirements:
   host:
@@ -20,8 +19,8 @@ requirements:
   run:
     - python {{ python }}
   build:
-    - {{ compiler('c') }} # [not win]
-    - vc14_runtime # [win64]
+    - {{ compiler('c') }} # [unix]
+    - vs2019_win-64  # [win64]
 
 about:
   home: https://github.com/cjdrake/pyeda
