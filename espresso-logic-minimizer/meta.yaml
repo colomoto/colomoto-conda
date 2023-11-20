@@ -12,4 +12,4 @@ build:
 
 test:
   commands:
-    - esperesso -h
+    - espresso -h
