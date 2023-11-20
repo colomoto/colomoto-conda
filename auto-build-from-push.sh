@@ -19,7 +19,7 @@ esac
 
 to_build() {
     if [[ "${arch}" == "linux" ]]; then
-        true
+        [ ! -f "$1/skip-linux" ]
     else
         [ -f "$1/build-${arch}" ]
     fi
