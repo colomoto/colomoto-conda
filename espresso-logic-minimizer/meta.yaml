@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: {{ https://github.com/hklarner/pyboolnet/raw/master/binaries/win64/espresso/espresso_win64.exe }}  # [win64]
+  url: https://github.com/hklarner/pyboolnet/raw/master/binaries/win64/espresso/espresso_win64.exe  # [win64]
 
 test:
   commands:
