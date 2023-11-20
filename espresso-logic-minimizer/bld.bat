@@ -1,1 +1,1 @@
-copy espresso_win64.exe %CONDA_PREFIX%\Library\bin\espresso.exe
+copy "espresso_win64.exe" "%LIBRARY_BIN%\software.exe"
