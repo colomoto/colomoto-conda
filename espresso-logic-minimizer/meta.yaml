@@ -9,3 +9,7 @@ source:
 
 build:
   number: 0
+
+test:
+  commands:
+    - esperesso -h
