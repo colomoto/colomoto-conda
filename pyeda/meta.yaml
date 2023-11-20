@@ -19,8 +19,7 @@ requirements:
   run:
     - python {{ python }}
   build:
-    - {{ compiler('c') }} # [unix]
-    - vs2019_win-64  # [win64]
+    - {{ compiler('c') }}
 
 about:
   home: https://github.com/cjdrake/pyeda
