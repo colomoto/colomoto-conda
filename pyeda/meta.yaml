@@ -20,7 +20,8 @@ requirements:
   run:
     - python {{ python }}
   build:
-    - {{ compiler('c') }}
+    - {{ compiler('c') }} # [not win]
+    - vc14_runtime # [win64]
 
 about:
   home: https://github.com/cjdrake/pyeda
