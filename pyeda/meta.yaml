@@ -19,7 +19,7 @@ requirements:
     - python {{ python }}
   build:
     - {{ compiler('c') }}
-    - clang =14.0.6 # [osx]
+    - clang =15.0.7 # [osx]
 
 about:
   home: https://github.com/cjdrake/pyeda
