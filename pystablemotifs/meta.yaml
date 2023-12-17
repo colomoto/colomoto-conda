@@ -1,5 +1,5 @@
 {% set name = "pystablemotifs" %}
-{% set version = "3.0.4dev1" %}
+{% set version = "3.0.6" %}
 
 package:
   name: '{{ name|lower }}'
