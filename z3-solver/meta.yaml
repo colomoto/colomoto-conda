@@ -1,0 +1,45 @@
+{% set name = "z3-solver" %}
+{% set version = "4.13.0.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/z3-solver-{{ version }}.tar.gz
+  sha256: 52588e92aec7cb338fd6288ce93758ae01770f62ca0c80e8f4f2b2333feaf51b
+
+build:
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
+
+requirements:
+  host:
+    - python
+    - setuptools >=46.4.0
+    - wheel
+    - cmake
+    - pip
+  run:
+    - python
+    - libgcc-ng
+    - libstdcxx-ng
+    - importlib-resources  # [py<39]
+
+# test:
+#   imports:
+#     - z3
+#   commands:
+#     - pip check
+#   requires:
+#     - pip
+
+about:
+  home: https://github.com/Z3Prover/z3
+  summary: an efficient SMT solver library
+  license: MIT
+  license_file: core/LICENSE.txt
+
+extra:
+  recipe-maintainers:
+    - pauleve
