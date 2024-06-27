@@ -39,7 +39,3 @@ about:
   summary: an efficient SMT solver library
   license: MIT
   license_file: core/LICENSE.txt
-
-extra:
-  recipe-maintainers:
-    - pauleve
