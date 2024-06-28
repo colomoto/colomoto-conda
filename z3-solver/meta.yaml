@@ -15,13 +15,14 @@ build:
 
 requirements:
   host:
-    - python
+    - {{ compiler('cxx') }}
+    - python {{ python }}
     - setuptools >=46.4.0
     - wheel
     - cmake
     - pip
   run:
-    - python
+    - python {{ python }}
     - libgcc-ng
     - libstdcxx-ng
     - importlib-resources  # [py<39]
