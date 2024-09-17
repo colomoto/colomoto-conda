@@ -1,0 +1,40 @@
+{% set name = "BooN" %}
+{% set version = "1.17" %}
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  url: https://github.com/Franck-Delaplace/BooN/archive/refs/tags/{{ version }}.zip
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - pip
+    - python
+    - setuptools
+    - hatchling
+  run:
+    - matplotlib
+    - netgraph
+    - networkx
+    - pulp
+    - python
+    - python-libsbml
+    - sympy
+    - tabulate
+    - tqdm
+    - z3-solver
+
+test:
+  imports:
+    - boon
+
+about:
+  home: https://franck-delaplace.github.io/BooN/
+  summary:  Boolean Network Analysis 
