@@ -1,0 +1,30 @@
+Common subdirectories: a/binaries and b/binaries
+Common subdirectories: a/conda and b/conda
+Common subdirectories: a/docs and b/docs
+Common subdirectories: a/.github and b/.github
+Common subdirectories: a/pyboolnet and b/pyboolnet
+diff '--color=auto' -u a/setup.py b/setup.py
+--- a/setup.py	2024-07-12 09:40:03.000000000 +0200
++++ b/setup.py	2024-09-24 17:00:42.898348933 +0200
+@@ -18,14 +18,11 @@
+     Windows="win64",
+ )
+ 
+-if "CONDA_BUILD" in os.environ:
+-    subdir = "conda"
+-else:
+-    try:
+-        subdir = SUBDIR_MAP[THIS_OS]
+-    except KeyError:
+-        print(f"the operating system is not recognized: os={THIS_OS}")
+-        sys.exit(1)
++try:
++    subdir = SUBDIR_MAP[THIS_OS]
++except KeyError:
++    print(f"the operating system is not recognized: os={THIS_OS}")
++    sys.exit(1)
+ 
+ BINARIES_SOURCE_DIR = os.path.join("binaries", subdir)
+ print(f"detected os and binaries: {THIS_OS=}, {BINARIES_SOURCE_DIR=}")
+Common subdirectories: a/tests and b/tests
+Common subdirectories: a/tutorials and b/tutorials
