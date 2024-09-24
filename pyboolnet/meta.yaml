@@ -1,5 +1,5 @@
 {% set name = "PyBoolNet" %}
-{% set version = "3.0.10" %}
+{% set version = "3.0.14" %}
 
 package:
   name: {{ name|lower }}
@@ -9,10 +9,10 @@ source:
   url: https://github.com/hklarner/pyboolnet/archive/refs/tags/{{ version }}.zip
   patches:
     - py3compat.patch
+    - embed-binaries.patch
 
 build:
   script: python -m pip install --no-deps --ignore-installed .
-  noarch: python
 
 requirements:
   host:
@@ -20,15 +20,9 @@ requirements:
     - pip
   run:
     - python
-    - bnettoprime
     - click
-    - clingo
-    - eqntott
-    - espresso-logic-minimizer
     - graphviz
     - networkx
-    - nusmv-a
-    - pyeda
 
 test:
   imports:
