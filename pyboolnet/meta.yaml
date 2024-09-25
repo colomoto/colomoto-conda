@@ -20,6 +20,7 @@ requirements:
     - pip
   run:
     - python
+    - readline=6.2
     - click
     - graphviz
     - networkx
