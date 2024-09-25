@@ -1,13 +1,23 @@
+Only in a/binaries/linux64: NuSMV-a
 diff '--color=auto' -ur a/binaries/linux64/settings.cfg b/binaries/linux64/settings.cfg
 --- a/binaries/linux64/settings.cfg	2024-07-12 09:40:03.000000000 +0200
-+++ b/binaries/linux64/settings.cfg	2024-09-25 22:09:38.566176906 +0200
-@@ -1,5 +1,5 @@
++++ b/binaries/linux64/settings.cfg	2024-09-25 22:42:47.684720298 +0200
+@@ -1,14 +1,7 @@
  [Executables]
 -nusmv           = ./NuSMV-a/NuSMVa_linux64
 +nusmv           = :NuSMV-a
  gringo          = ./gringo-4.4.0/gringo
  clasp           = ./clasp-3.1.1/clasp-3.1.1-x86-linux
  bnet2prime      = ./BNetToPrime/BNetToPrime_linux64
+ espresso        = ./espresso/espresso_linux64
+ eqntott         = ./eqntott/eqntott_linux64
+-dot             = /usr/bin/dot
+-neato           = /usr/bin/neato
+-fdp             = /usr/bin/fdp
+-sfdp            = /usr/bin/sfdp
+-circo           = /usr/bin/circo
+-twopi           = /usr/bin/twopi
+-convert         = /usr/bin/convert
 diff '--color=auto' -ur a/setup.py b/setup.py
 --- a/setup.py	2024-07-12 09:40:03.000000000 +0200
 +++ b/setup.py	2024-09-24 17:00:42.898348933 +0200

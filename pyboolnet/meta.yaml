@@ -1,6 +1,6 @@
 {% set name = "PyBoolNet" %}
 {% set version = "3.0.14" %}
-{% set patch = ".post2" %}
+{% set patch = "" %}
 
 package:
   name: {{ name|lower }}
