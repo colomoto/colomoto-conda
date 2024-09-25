@@ -1,9 +1,10 @@
 {% set name = "PyBoolNet" %}
 {% set version = "3.0.14" %}
+{% set patch = ".post2" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}.post1
+  version: {{ version }}{{ patch }}
 
 source:
   url: https://github.com/hklarner/pyboolnet/archive/refs/tags/{{ version }}.zip
@@ -12,7 +13,7 @@ source:
     - embed-binaries.patch
 
 build:
-  script: python -m pip install --no-deps --ignore-installed .
+  script: python -m pip install --no-deps --ignore-installed . # [not linux]
 
 requirements:
   host:
@@ -20,10 +21,10 @@ requirements:
     - pip
   run:
     - python
-    - readline=6.2
     - click
     - graphviz
     - networkx
+    - NuMSV-a  # [linux64]
 
 test:
   imports:
@@ -32,4 +33,3 @@ test:
 about:
   home: https://github.com/hklarner/PyBoolNet
   summary: 'Generation, modification and analysis of Boolean networks'
-
