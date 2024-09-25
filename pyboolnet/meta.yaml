@@ -24,7 +24,7 @@ requirements:
     - click
     - graphviz
     - networkx
-    - NuMSV-a  # [linux64]
+    - nusmv-a  # [linux64]
 
 test:
   imports:
