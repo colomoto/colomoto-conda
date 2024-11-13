@@ -1,3 +1,2 @@
-
-mkdir  "%PREFIX%\bin"
-robocopy bin  "%PREFIX%\bin" *.*
+bash %RECIPE_DIR%/build.sh
+if errorlevel 1 exit 1

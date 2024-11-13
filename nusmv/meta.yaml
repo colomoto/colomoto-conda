@@ -9,6 +9,10 @@ source:
   url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-macosx64.tar.gz    # [osx]
   url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-win64.tar.gz       # [win64]
 
+requirements:
+  build:
+    posix # [win64]
+
 about:
   home: http://nusmv.fbk.eu
 
