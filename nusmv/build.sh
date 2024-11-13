@@ -1,3 +1,4 @@
 
-cp bin/* "$PREFIX"/bin/
+mkdir -p "$PREFIX"/bin/
+cp -v bin/* "$PREFIX"/bin/
 
