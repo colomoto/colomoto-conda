@@ -13,5 +13,7 @@ if [ `uname` == Linux ]; then
         3.13) wheel="https://files.pythonhosted.org/packages/d4/0b/d75ae240eb87a327e53e7dd9a47b9fed0da0a8849456434ca976867d9136/diptest-0.8.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl" ;;
         *) exit 1
     esac
-    echo pip install --no-deps "$wheel"
+    pip install --no-deps "$wheel"
+else
+    pip install --no-deps --only-binary=:all: diptest
 fi
