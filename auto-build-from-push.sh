@@ -34,6 +34,7 @@ if [ -z "${mod}" ]; then
 fi
 conda install -y anaconda-client conda-build conda-verify
 conda config --set anaconda_upload yes
+conda remove --name base -y conda-anaconda-telemetry
 export CONDA_PLUGINS_ANACONDA_TELEMETRY='false'
 for e in ${mod}; do
     cd ${e}
