@@ -32,13 +32,12 @@ echo $mod
 if [ -z "${mod}" ]; then
     exit 0
 fi
-conda install -y conda-libmamba-solver
-conda config --set solver libmamba
 conda install -y anaconda-client conda-build conda-verify
 conda config --set anaconda_upload yes
+export CONDA_PLUGINS_ANACONDA_TELEMETRY='false'
 for e in ${mod}; do
     cd ${e}
-    conda --no-plugins build --user colomoto --token $ANACONDA_TOKEN --no-force-upload\
+    conda build --user colomoto --token $ANACONDA_TOKEN --no-force-upload\
         -c defaults -c potassco -c conda-forge -c colomoto .
     cd ..
 done
