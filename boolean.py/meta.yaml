@@ -1,12 +1,12 @@
 {% set name = "boolean.py" %}
-{% set version = "4.0" %}
+{% set version = "4.0+git_1" %}
 
 package:
   name: '{{ name|lower }}'
   version: '{{ version }}'
 
 source:
-  url: https://github.com/bastikr/boolean.py/archive/refs/tags/v{{ version }}.zip
+  url: https://github.com/bastikr/boolean.py/archive/228f005f27b8f68156dfd4e56dfdb3c424941141.zip
 
 build:
   number: 0
