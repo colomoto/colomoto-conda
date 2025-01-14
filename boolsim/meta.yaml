@@ -3,7 +3,12 @@ package:
   version: "1.2"
 
 source:
-  url: https://www.vital-it.ch/api/download.php?software=boolSim&file=boolSim-1.2.0-Linux-libc2.12.tar.gz
+  url: https://www.sib.swiss/sites/default/files/2024-01/boolSim-1.2.0-Linux-libc2.12.tar_.gz # [linux]
+  url: https://www.sib.swiss/sites/default/files/2024-01/boolSim-1.2.0-Darwin-OSX10.6.tar_.gz # [osx]
+
+test:
+  commands:
+    - boolSim -h
 
 about:
   home:  https://www.vital-it.ch/research/software/boolSim
