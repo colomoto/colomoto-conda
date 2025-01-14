@@ -5,6 +5,7 @@ package:
 source:
   url: https://www.sib.swiss/sites/default/files/2024-01/boolSim-1.2.0-Linux-libc2.12.tar_.gz # [linux]
   url: https://www.sib.swiss/sites/default/files/2024-01/boolSim-1.2.0-Darwin-OSX10.6.tar_.gz # [osx]
+  fn: boolSim-bin.tar.gz
 
 test:
   commands:
