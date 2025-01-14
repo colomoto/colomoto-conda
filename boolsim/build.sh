@@ -1,4 +1,3 @@
-find
 
 mkdir -p "$PREFIX/bin"
 # Copy the pre-built binaries
