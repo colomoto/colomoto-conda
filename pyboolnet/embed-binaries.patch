@@ -1,7 +1,6 @@
-Only in a/binaries/linux64: NuSMV-a
-diff '--color=auto' -ur a/binaries/linux64/settings.cfg b/binaries/linux64/settings.cfg
---- a/binaries/linux64/settings.cfg	2024-07-12 09:40:03.000000000 +0200
-+++ b/binaries/linux64/settings.cfg	2024-09-25 22:42:47.684720298 +0200
+diff '--color=auto' -ur pyboolnet-3.0.16/binaries/linux64/settings.cfg b/binaries/linux64/settings.cfg
+--- pyboolnet-3.0.16/binaries/linux64/settings.cfg	2024-11-12 10:18:26.000000000 +0100
++++ b/binaries/linux64/settings.cfg	2025-01-20 21:40:47.202435602 +0100
 @@ -1,14 +1,7 @@
  [Executables]
 -nusmv           = ./NuSMV-a/NuSMVa_linux64
@@ -18,10 +17,24 @@ diff '--color=auto' -ur a/binaries/linux64/settings.cfg b/binaries/linux64/setti
 -circo           = /usr/bin/circo
 -twopi           = /usr/bin/twopi
 -convert         = /usr/bin/convert
-diff '--color=auto' -ur a/setup.py b/setup.py
---- a/setup.py	2024-07-12 09:40:03.000000000 +0200
-+++ b/setup.py	2024-09-24 17:00:42.898348933 +0200
-@@ -18,14 +18,11 @@
+diff '--color=auto' -ur pyboolnet-3.0.16/binaries/mac64/settings.cfg b/binaries/mac64/settings.cfg
+--- pyboolnet-3.0.16/binaries/mac64/settings.cfg	2024-11-12 10:18:26.000000000 +0100
++++ b/binaries/mac64/settings.cfg	2025-01-20 21:41:13.726756018 +0100
+@@ -5,10 +5,3 @@
+ bnet2prime      = ./BNetToPrime/BNetToPrime_mac64
+ espresso        = ./espresso/espresso_mac64
+ eqntott         = ./eqntott/eqntott_mac64
+-dot             = /usr/bin/dot
+-neato           = /usr/bin/neato
+-fdp             = /usr/bin/fdp
+-sfdp            = /usr/bin/sfdp
+-circo           = /usr/bin/circo
+-twopi           = /usr/bin/twopi
+-convert         = /usr/bin/convert
+diff '--color=auto' -ur pyboolnet-3.0.16/setup.py b/setup.py
+--- pyboolnet-3.0.16/setup.py	2024-11-12 10:18:26.000000000 +0100
++++ b/setup.py	2025-01-20 21:40:47.202435602 +0100
+@@ -17,14 +17,11 @@
      Windows="win64",
  )
  

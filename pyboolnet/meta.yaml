@@ -12,7 +12,7 @@ source:
     - embed-binaries.patch
 
 build:
-  script: python -m pip install --no-deps --ignore-installed . # [not linux]
+  script: python -m pip install --no-deps --ignore-installed . # [win]
 
 requirements:
   host:
