@@ -1,13 +1,13 @@
-{% set version = "2.6.0" %}
+{% set version = "2.7.0" %}
 
 package:
   name: nusmv
   version: {{ version }}
 
 source:
-  url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-linux64.tar.gz     # [linux64]
-  url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-macosx64.tar.gz    # [osx]
-  url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-win64.tar.gz       # [win64]
+  url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-linux64.tar.xz     # [linux64]
+  url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-macos-universal.tar.xz    # [osx]
+  url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-win64.zip       # [win64]
 
 requirements:
   build:
