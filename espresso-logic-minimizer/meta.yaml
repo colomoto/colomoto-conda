@@ -1,0 +1,21 @@
+{% set version = "9999" %}
+
+package:
+  name: espresso-logic-minimizer
+  version: {{ version }}
+
+source:
+  url: https://github.com/Gigantua/Espresso/releases/download/Latest/Espresso.exe  # [win64]
+  url: https://github.com/colomoto/espresso-logic-minimizer/archive/refs/heads/master.zip # [unix]
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - {{ compiler('c') }} # [unix]
+    - clang =15.0.7 # [osx]
+
+#test:
+#  commands:
+#    - espresso -h
