@@ -21,7 +21,5 @@ jobs:
               with:
                   miniconda-version: "latest"
             - run: conda info
-            - name: auto build
-              shell: bash -el {0}
-              run: bash auto-build-from-push.sh
+            - run: bash -el auto-build-from-push.sh
 
