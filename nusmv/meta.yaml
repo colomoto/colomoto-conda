@@ -5,9 +5,9 @@ package:
   version: {{ version }}
 
 source:
-  url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-linux64.tar.xz     # [linux64]
-  url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-macos-universal.tar.xz    # [osx]
-  url: http://nusmv.fbk.eu/distrib/NuSMV-{{version}}-win64.zip       # [win64]
+  url: http://nusmv.fbk.eu/distrib/{{ version }}/NuSMV-{{version}}-linux64.tar.xz     # [linux64]
+  url: http://nusmv.fbk.eu/distrib/{{ version }}/NuSMV-{{version}}-macos-universal.tar.xz    # [osx]
+  url: http://nusmv.fbk.eu/distrib/{{ version }}/NuSMV-{{version}}-win64.zip       # [win64]
 
 requirements:
   build:
