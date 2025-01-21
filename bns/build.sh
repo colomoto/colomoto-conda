@@ -4,6 +4,7 @@ mkdir -p "${PREFIX}"/bin
 
 if [[ "$OSTYPE" == darwin* && "$(uname -m)" == "x86_64" ]]; then
     cp -v Pre-compiled*/Mac/bns "${PREFIX}/bin/"
+    chmod +x "${PREFIX}/bin/bns"
     exit $?
 fi
 
