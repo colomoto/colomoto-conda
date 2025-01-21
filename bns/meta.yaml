@@ -4,9 +4,8 @@ package:
 
 requirements:
   host:
-    - {{ compiler('cxx') }}
-    - ld64 # [osx and x86_64]
-    - zlib
+    - {{ compiler('cxx') }} # [linux or arm64]
+    - zlib # [linux or arm64]
 
 test:
   commands:
