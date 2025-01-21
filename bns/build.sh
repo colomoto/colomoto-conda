@@ -5,11 +5,13 @@ mkdir -p "${PREFIX}"/bin
 env
 echo $CXX
 which $CXX
-$CXX --version
+$CXX -E -v
 
 # First build MiniSat
 cd ./MiniSat_v1.14
-make CXX="$CXX -std=c++03"
+
+
+make CXX="$CXX -std=c++03" CFLAGS="$CFLAGS" Solver.o
 
 # build BNS itself
 cd ../src

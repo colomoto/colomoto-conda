@@ -3,10 +3,12 @@ package:
   version: "1.3"
 
 requirements:
-  build:
+  #build:
+    #- clangxx =15.0.7 # [osx and x86_64]
+    #- clang =15.0.7 # [osx and x86_64]
+  host:
     - {{ compiler('cxx') }}
-    - clangxx =15.0.7 # [osx and x86_64]
-    - clang =15.0.7 # [osx and x86_64]
+    - zlib
 
 test:
   commands:
