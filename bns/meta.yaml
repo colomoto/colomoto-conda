@@ -5,8 +5,7 @@ package:
 requirements:
   host:
     - {{ compiler('cxx') }}
-    - clangxx =14.* # [osx and x86_64]
-    - clang =14.* # [osx and x86_64]
+    - ld64 # [osx and x86_64]
     - zlib
 
 test:

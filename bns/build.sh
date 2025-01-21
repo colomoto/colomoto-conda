@@ -6,6 +6,8 @@ env
 echo $CXX
 which $CXX
 $CXX -E -v
+which ld
+ld -v
 
 # First build MiniSat
 cd ./MiniSat_v1.14
