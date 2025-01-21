@@ -3,15 +3,9 @@ set -x
 mkdir -p "${PREFIX}"/bin
 
 if [[ "$OSTYPE" == darwin* && "$(uname -m)" == "x86_64" ]]; then
-    ls -l /Applications
-    sudo xcode-select -s /Applications/Xcode_14.3.1.app
-    ls -l /Applications
+    cp -v Pre-compiled*/Mac/bns "${PREFIX}/bin/"
+    exit $?
 fi
-
-CXX=${CXX:-g++}
-echo $CXX
-which $CXX
-$CXX -E -v
 
 # First build MiniSat
 cd ./MiniSat_v1.14
