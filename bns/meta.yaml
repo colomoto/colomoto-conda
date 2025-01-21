@@ -4,7 +4,8 @@ package:
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
+    - {{ compiler('cxx') }}  # [linux or arm64]
+    - clang =15.0.7 # [osx and x86_64]
 
 test:
   commands:
