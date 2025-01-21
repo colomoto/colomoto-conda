@@ -3,7 +3,8 @@ set -x
 mkdir -p "${PREFIX}"/bin
 
 env
-CXX=${CXX:-g++}
+ls -l /usr/bin
+CXX=${CXX:-g++-14}
 echo $CXX
 which $CXX
 $CXX -E -v
