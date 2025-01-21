@@ -10,6 +10,7 @@ jobs:
         strategy:
             matrix:
                 os: [Ubuntu-latest, windows-latest, macos-latest, macos-13]
+            fail-fast: false
         env:
             OLD_REF: ${{ github.event.before }}
             ANACONDA_TOKEN: ${{ secrets.ANACONDA_TOKEN }}
