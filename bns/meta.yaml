@@ -5,8 +5,8 @@ package:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - clangxx =15.0.7 # [osx and x86_64]
-    - clang =15.0.7 # [osx and x86_64]
+    #- clangxx =15.0.7 # [osx and x86_64]
+    #- clang =15.0.7 # [osx and x86_64]
 
 test:
   commands:
