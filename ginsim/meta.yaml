@@ -7,11 +7,11 @@ source:
 
 build:
   noarch: generic
-  number: 12
+  number: 13
 
 requirements:
   run:
-    - openjdk
+    - openjdk 9999|11*
     - clingo
     - nusmv
 
