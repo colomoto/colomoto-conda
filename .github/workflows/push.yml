@@ -9,7 +9,7 @@ jobs:
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
-                os: [Ubuntu-latest, windows-latest, macos-latest]
+                os: [Ubuntu-latest, windows-latest, macos-latest, macos-13]
         env:
             OLD_REF: ${{ github.event.before }}
             ANACONDA_TOKEN: ${{ secrets.ANACONDA_TOKEN }}

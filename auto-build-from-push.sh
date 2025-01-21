@@ -11,7 +11,12 @@ fi
 echo "OSTYPE: $OSTYPE"
 
 case "$OSTYPE" in
-  darwin*) arch=macos;;
+  darwin*) arch=macos
+      if [[ "$(uname -m)" == "x86_64" ]]; then
+          arch="${arch}64"
+    fi
+
+      ;;
   linux*)  arch=linux;;
   msys*)   arch=win64;;
   *)        echo "unknown: $OSTYPE"; exit 1;;
