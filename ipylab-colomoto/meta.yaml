@@ -1,7 +1,7 @@
 {% set version = "1.1.0" %}
 
 package:
-  name: ipylab
+  name: ipylab-colomoto
   version: {{ version }}
 
 source:
