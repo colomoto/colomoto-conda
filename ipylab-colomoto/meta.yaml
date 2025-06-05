@@ -1,0 +1,57 @@
+{% set version = "1.1.0" %}
+
+package:
+  name: ipylab
+  version: {{ version }}
+
+source:
+  url: https://github.com/pictavien/colomoto-ipylab/archive/dfff4236007cc69f917fc139aeed8ddb98cf2342.zip
+
+build:
+  noarch: python
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - hatch-jupyter-builder >=0.8.2
+    - hatch-nodejs-version
+    - hatchling >=1.5.0
+    - jupyterlab >=4.0,<5
+    - pip
+    - python
+  run:
+    - ipywidgets >=7.6.0,<9
+    - python
+
+test:
+  requires:
+    - pip
+    - jupyterlab >=4.0,<5
+    - m2-grep  # [win]
+    - python 
+  imports:
+    - ipylab
+  commands:
+    - pip check
+    # print them all for debugging
+    - jupyter labextension list
+    # write out lists to grep
+    - jupyter labextension list 1>labextensions 2>&1
+    # check files
+    - grep -iE "ipylab.*OK.*ipylab" labextensions
+
+about:
+  home: https://github.com/jtpio/ipylab
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file:
+    - LICENSE
+    - ipylab/labextension/static/third-party-licenses.json
+  summary: Control JupyterLab from Python notebooks
+  doc_url: https://ipylab.readthedocs.io
+
+extra:
+  recipe-maintainers:
+    - jtpio
+    - bollwyvl
