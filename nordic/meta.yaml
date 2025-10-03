@@ -10,7 +10,7 @@ source:
   - url: "https://github.com/clreda/{{ ucname }}/archive/refs/tags/v{{ version }}.tar.gz"
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
   noarch: python
 
