@@ -44,6 +44,6 @@ export CONDA_PLUGINS_ANACONDA_TELEMETRY='false'
 for e in ${mod}; do
     cd ${e}
     conda build --user colomoto --token $ANACONDA_TOKEN --no-force-upload\
-        -c defaults -c potassco -c conda-forge -c colomoto .
+        -c defaults -c potassco -c conda-forge -c daemontus -c colomoto .
     cd ..
 done
