@@ -1,0 +1,64 @@
+{% set name = "nordic" %}
+{% set ucname = "NORDic" %}
+{% set version = "2.7.1" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  - url: "https://github.com/clreda/{{ ucname }}/archive/refs/tags/v{{ version }}.tar.gz"
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
+  noarch: python
+
+requirements:
+  host:
+    - python
+    - pip
+    - setuptools_scm
+  run:
+    - python
+    - clingo >=5.6.1
+    - cmappy >=4.0.1
+    - graphviz >=0.20.1
+    - matplotlib-base
+    - omnipath
+    - openpyxl >=3.0.10
+    - qnorm >=0.5.1
+    - quadprog >=0.1.11
+    - scikit-learn >=1.1.2
+    - scipy >=1.6.2
+    - seaborn >=0.12.1
+    - tqdm >=4.62.3
+    - numpy >=1.22.4,!=2.0.*,!=2.1.*
+    # colomoto dependencies
+    - bonesis >=0.6.8.1
+    - maboss
+    - mpbn >=4.2
+
+test:
+  imports:
+    - NORDic
+    - NORDic.NORDic_DR
+    - NORDic.NORDic_DS
+    - NORDic.NORDic_NI
+    - NORDic.NORDic_PMR
+    - NORDic.UTILS
+
+about:
+  home: "https://github.com/clreda/NORDic"
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: "NORDic: a Network-Oriented package for the Repurposing of Drugs"
+  doc_url: "https://github.com/clreda/NORDic/blob/main/README.md"
+  dev_url: "https://github.com/clreda/NORDic"
+
+extra:
+  recipe-maintainers:
+    - clreda
+  identifiers:
+    - doi:10.5281/zenodo.7239047
