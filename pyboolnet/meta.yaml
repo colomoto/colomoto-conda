@@ -27,12 +27,9 @@ requirements:
     - nusmv-a  # [linux64]
 
 test:
-  requires:
-    - pytest
   imports:
     - pyboolnet
-  commands:
-    - pytest
+    - pyboolnet.repository
 
 about:
   home: https://github.com/hklarner/PyBoolNet

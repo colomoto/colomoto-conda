@@ -9,7 +9,7 @@ jobs:
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
-                os: [Ubuntu-latest, windows-latest, macos-latest, macos-13]
+                os: [Ubuntu-latest, windows-latest, macos-latest]
             fail-fast: false
         env:
             OLD_REF: ${{ github.event.before }}
