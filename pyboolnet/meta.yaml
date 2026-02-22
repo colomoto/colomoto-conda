@@ -13,6 +13,7 @@ source:
 
 build:
   script: python -m pip install --no-deps --ignore-installed . # [win]
+  number: 1
 
 requirements:
   host:
@@ -26,8 +27,12 @@ requirements:
     - nusmv-a  # [linux64]
 
 test:
+  requires:
+    - pytest
   imports:
     - pyboolnet
+  commands:
+    - pytest
 
 about:
   home: https://github.com/hklarner/PyBoolNet
