@@ -19,6 +19,7 @@ case "$OSTYPE" in
       ;;
   linux*)  arch=linux;;
   msys*)   arch=win64;;
+  cygwin)  arch=win64;;
   *)        echo "unknown: $OSTYPE"; exit 1;;
 esac
 
