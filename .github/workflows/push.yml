@@ -21,7 +21,5 @@ jobs:
             - uses: conda-incubator/setup-miniconda@v4
               with:
                 python-version: "3.12"
-                auto-activate: true
-                activate-environment: ""
             - run: bash -el auto-build-from-push.sh
 
