@@ -22,7 +22,7 @@ requirements:
   build:
     - {{ compiler("cxx") }}
     - setuptools
-    - wheel
+    - setuptools-scm
   host:
     - python
     - pip
