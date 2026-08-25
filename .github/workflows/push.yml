@@ -20,7 +20,11 @@ jobs:
                   fetch-depth: 0
             - uses: conda-incubator/setup-miniconda@v4
               with:
-                  miniconda-version: "latest"
+                python-version: "3.12"
+            - run: conda install -y anaconda-client conda-build conda-verify
+            - run: conda config --set anaconda_upload yes
+            - run: conda remove --name base -y conda-anaconda-telemetry
             - run: conda info
+            - run: conda build -h
             - run: bash -el auto-build-from-push.sh
 
