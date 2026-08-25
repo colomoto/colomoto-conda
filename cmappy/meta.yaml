@@ -16,7 +16,7 @@ build:
     - concat=cmapPy.pandasGEXpress.concat:main
     - subset=cmapPy.pandasGEXpress.subset:main
   number: 6
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
 
 requirements:
   build:
