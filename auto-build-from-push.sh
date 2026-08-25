@@ -42,11 +42,11 @@ conda info
 conda install -y python=3.12 anaconda-client conda-build conda-verify
 conda config --set anaconda_upload yes
 conda remove --name base -y conda-anaconda-telemetry
-conda build -h
+conda-build -h
 export CONDA_PLUGINS_ANACONDA_TELEMETRY='false'
 for e in ${mod}; do
     cd ${e}
-    conda build --user colomoto --token $ANACONDA_TOKEN --no-force-upload\
+    conda-build --user colomoto --token $ANACONDA_TOKEN --no-force-upload\
         -c defaults -c potassco -c conda-forge -c daemontus -c colomoto .
     cd ..
 done
