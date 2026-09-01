@@ -47,7 +47,12 @@ conda-build -h
 export CONDA_PLUGINS_ANACONDA_TELEMETRY='false'
 for e in ${mod}; do
     cd ${e}
-    conda-build --user colomoto --token $ANACONDA_TOKEN --no-force-upload\
+    if [ -f label ]; then
+        LABEL="--label $(<label)"
+    else
+        LABEL=
+    fi
+    conda-build --user colomoto --token $ANACONDA_TOKEN ${LABEL} --no-force-upload\
         -c defaults -c potassco -c conda-forge -c daemontus -c colomoto .
     cd ..
 done
