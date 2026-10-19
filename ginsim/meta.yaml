@@ -16,7 +16,7 @@ build:
 
 requirements:
   run:
-    - openjdk >= 25
+    - openjdk >=25
     - clingo
     - nusmv
 
