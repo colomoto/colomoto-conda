@@ -1,5 +1,5 @@
 {% set version = "3.1" %}
-{% set patch = ".post20260708" %}
+{% set patch = ".post20261018" %}
 
 package:
   name: ginsim
@@ -7,7 +7,7 @@ package:
 
 source:
   #url: https://ginsim.github.io/install/GINsim-{{ version }}-with-deps.jar
-  url: https://github.com/GINsim/GINsim/releases/download/latest/GINsim-{{ version }}-SNAPSHOT-jar-with-dependencies.jar
+  url: https://github.com/GINsim/GINsim/releases/download/latest/GINsim-{{ version }}-SNAPSHOT-jar-with-deps-java25.jar
 
 
 build:
@@ -16,7 +16,7 @@ build:
 
 requirements:
   run:
-    - openjdk
+    - openjdk >= 25
     - clingo
     - nusmv
 
