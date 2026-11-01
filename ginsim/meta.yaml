@@ -6,13 +6,12 @@ package:
   version: "{{ version }}{{ patch }}"
 
 source:
-  #url: https://ginsim.github.io/install/GINsim-{{ version }}-with-deps.jar
-  url: https://ginsim.github.io/install/GINsim-{{ version }}-with-deps-java25.jar
+  url: https://ginsim.github.io/install/GINsim-{{ version }}-with-deps-java11.jar
 
 
 build:
   noarch: generic
-  number: 0
+  number: 11
 
 requirements:
   run:
