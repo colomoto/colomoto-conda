@@ -23,7 +23,7 @@ requirements:
     - matplotlib
     - netgraph
     - networkx
-    - pulp
+    - pulp <4.0
     - python
     - python-libsbml
     - sympy
